@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculus</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-wrapper" style="margin-bottom: 20px;"> 
+            <span>1st Number</span> 
+            <input type="text" id="first" style="margin-bottom: 20px;"> 
+            <br><span>2nd Number</span> <input type="text" id="second"> 
+        </div> 
+            <button id="btn-first" onclick="multiplication()">multiply</button> 
+            <button id="btn-second" onclick='division()'>divide</button> 
+        <div class="block" style="margin-top: 20px;"> 
+            <span>The Result is:</span> 
+            <span id="output-value"></span> 
+        </div> 
+    </div>
+<script>
+    let inputFirst = document.getElementById('first'); 
+    let inputSecond = document.getElementById('second');
+    let outputValue = document.getElementById('output-value');
+    
+    function multiplication(){
+        let multResult = inputFirst.value * inputSecond.value;
+        outputValue.innerHTML = multResult.toFixed(3);
+    }
+    function division(){
+        let divResult = inputFirst.value / inputSecond.value;
+        outputValue.innerHTML = divResult.toFixed(3);
+    }
+
+</script>
+</body>
+</html>

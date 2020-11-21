@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body onload="handleRotation()">
+<h3 id="exOutput">w3school</h3>
+
+<script>
+    function handleRotation() {
+
+      setInterval(function(){
+          var currentValue = document.getElementById("exOutput").innerHTML;
+          document.getElementById("exOutput").innerHTML = performLogic(currentValue);
+      }, 300);
+  }
+
+  function performLogic(current) {
+      var outputVal = current.substr(1) + current.substr(0,1);
+      return outputVal;
+  }
+</script>
+
+</body>
+<script>
+
+
+</script>
+</html>

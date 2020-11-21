@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculus</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-wrapper" style="margin-bottom: 20px;"> 
+            <span>Degrees</span> 
+            <input type="text" id="first" style="margin-bottom: 20px;"> 
+        </div> 
+            <button id="btn-first" onclick="toCelsius()">To Celsius</button> 
+            <button id="btn-second" onclick='toFahrenheit()'>To Fahrenheit</button> 
+        <div class="block" style="margin-top: 20px;"> 
+            <span>The Result is:</span> 
+            <span id="output-value"></span> 
+        </div> 
+    </div>
+<script>
+    let inputDegrees = document.getElementById('first'); 
+    let outputValue = document.getElementById('output-value');
+    
+    function toCelsius(){
+        let toCelResult = (inputDegrees.value - 32) * 5 / 9;
+        outputValue.innerHTML = toCelResult.toFixed(1);
+    }
+    function toFahrenheit(){
+        let toFahResult = (inputDegrees.value * 9/5) + 32;
+        outputValue.innerHTML = toFahResult.toFixed(1);
+    }
+
+</script>
+</body>
+</html>
