@@ -10,4 +10,4 @@ function getResult (a,b,c) {
     return 20;
 }
 
-console.log(getResult (3, 3, 4));
+console.log(getResult(3, 3, 3));
